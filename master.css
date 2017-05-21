@@ -1,0 +1,24 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	background-image: url('images/bg.png');
+	background-color: black;
+}
+
+.enter{
+	width: 60%;
+	margin: auto;
+
+}
+
+.orbit{
+	padding-top: 8rem;
+	max-width: 100%;
+}
+
+.text{
+	color: white;
+	text-align: center;
+}
