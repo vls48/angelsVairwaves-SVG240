@@ -7,9 +7,15 @@ body{
 	background-color: black;
 }
 
+@font-face {
+	font-family: 'traj';
+	src:url(fonts/traj.TTF);
+}
+
 .enter{
 	width: 60%;
 	margin: auto;
+	transition: all 1s ease-in-out;
 
 }
 
@@ -18,7 +24,77 @@ body{
 	max-width: 100%;
 }
 
-.text{
-	color: white;
+button{
+	color: #E3E3D1;
 	text-align: center;
+	font-size: 1.8rem;
+	border: none;
+	background-color: transparent;
+	padding: 5px;
+	transition: all 1s ease-in-out;
+	font-family: 'traj';
+	letter-spacing: 4px;
+}
+
+.textbutton{
+	text-align: center;
+}
+
+@keyframes circle {
+	from {
+		transform: rotate(0deg)
+		           translate(-150px)
+		           rotate(-360deg)
+		           scale(.1);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-150px) 
+		           rotate(-360deg)
+		           scale(.1);
+	}
+}
+
+.rocket-parts{
+	transform-origin: 160px 160px;
+	animation: circle 13s infinite linear;
+	padding: 5px;
+}
+
+svg:hover .rings{
+	stroke: #D6A956;
+	r: 35%;
+}
+
+svg:hover .button{
+	color: #D6A956;
+}
+
+.button:hover {
+	color: #D6A956;
+}
+
+.button:hover .rings{
+	stroke: #D6A956;
+	r: 35%;
+}
+
+.rings{
+	transition: all 1s ease-in-out;
+}
+
+@media screen and (min-width: 768px){
+	
+	.enter{
+		max-width: 45%;
+	}
+
+}
+
+@media screen and (min-width: 960px){
+	
+	.enter{
+		max-width: 30%;
+	}
+
 }
