@@ -5,24 +5,34 @@
 body{
 	background-image: url('images/bg.png');
 	background-color: black;
+	font-family: "trajan-pro-3";
+	padding-bottom: 400px;
 }
 
-@font-face {
-	font-family: 'TRAJANUS';
-	src: url('fonts/trajan/TRAJANUS.TTF') format('truetype');
-}
 
-h1, li, p{
-	color: #E3E3D1;
-}
-
-h2{
-	color: #D6A956;
+li, p{
+	color: #D3DEE4;
 }
 
 ul{
 	list-style: none;
 	padding: 0;
+}
+
+.heading{
+	font-size: 2.5rem;
+}
+
+.title{
+	font-size: 3rem;
+	margin-bottom: 0;
+	color: #D6A956;
+}
+
+.support{
+	margin-top: 0;
+	font-size: 1.2rem;
+	color: #9DADB6;
 }
 
 .disc li{
@@ -47,15 +57,15 @@ ul{
 }
 
 button{
-	color: #E3E3D1;
+	color: #D3DEE4;
 	text-align: center;
 	font-size: 1.8rem;
 	border: none;
 	background-color: transparent;
 	padding: 5px;
 	transition: all 1s ease-in-out;
-	font-family: TRAJANUS, Times, serif;
-	letter-spacing: 4px;
+	font-family: "trajan-pro-3";
+	letter-spacing: 3px;
 }
 
 .textbutton{
@@ -77,18 +87,28 @@ button{
 	}
 }
 
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+	}
+	to {
+		transform: rotate(360deg)
+
+	}
+}
+
 .rocket-parts{
 	transform-origin: 160px 160px;
 	animation: circle 13s infinite linear;
 	padding: 5px;
 }
 
-svg:hover .rings{
+.enter:hover .rings{
 	stroke: #D6A956;
 	r: 35%;
 }
 
-svg:hover .button{
+.enter:hover .button{
 	color: #D6A956;
 }
 
@@ -106,8 +126,102 @@ svg:hover .button{
 }
 
 
+
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 0;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #D6A956;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.hamburger{
+	position: fixed;
+	bottom: 20%;
+	left: 50%;
+	margin-left: -18px;
+}
+
+.navline{
+	position: fixed;
+	bottom: 28%;
+}
+
+.earth{
+	position: fixed;
+	width: 120%;
+	bottom: -200%;
+	left: -10%;
+	animation: rotate 45s linear infinite;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+	section{
+	height: 480px;
+}
+
+
+
+}
+
+
 /*//------------------------Non-mobile-----------------------------//*/
 
+
+@media screen and (min-width: 500px){
+	.hamburger{
+		display: none;
+	}
+}
 
 
 @media screen and (min-width: 768px){
@@ -115,6 +229,7 @@ svg:hover .button{
 	.enter{
 		max-width: 45%;
 	}
+
 
 }
 
