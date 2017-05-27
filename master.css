@@ -6,12 +6,38 @@ body{
 	background-image: url('images/bg.png');
 	background-color: black;
 	font-family: "trajan-pro-3";
-	padding-bottom: 400px;
+	padding-bottom: 100px;
+
+
+  background-color: #333333;
+  /* transition on change */
+  opacity: 1;
+  transition: 3s opacity;
+
+}
+
+body.blackScreen {
+  opacity: 0;
+  transition: none;
 }
 
 
+
+a{
+	text-decoration: none;	
+}
+
+a:visited{
+  color:#D6A956;
+}
+
 li, p{
 	color: #D3DEE4;
+}
+
+li{
+	line-height: 30px;
+	padding-top: 20px;
 }
 
 ul{
@@ -33,10 +59,12 @@ ul{
 	margin-top: 0;
 	font-size: 1.2rem;
 	color: #9DADB6;
+	padding-top: 35px;
 }
 
 .disc li{
 	color: #D6A956;
+	font-size: 1.2rem;
 }
 
 .wrapper{
@@ -183,6 +211,13 @@ button{
 .navline{
 	position: fixed;
 	bottom: 28%;
+	left: 0;
+}
+
+.navline2{
+	position: fixed;
+	top: 7%;
+	left: 0;
 }
 
 .earth{
@@ -191,6 +226,21 @@ button{
 	bottom: -200%;
 	left: -10%;
 	animation: rotate 45s linear infinite;
+}
+
+.music{
+	font-size: 1.2rem;
+	text-align: center;
+	margin: auto;
+}
+
+.hide{
+	opacity: 0;
+}
+
+#soundicon{
+	width: 36px;
+	height: 36px;
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
@@ -206,7 +256,8 @@ button{
 
 @media screen and (max-width: 500px){
 	section{
-	height: 480px;
+	height: 540px;
+	padding-top: 50px;
 }
 
 
@@ -220,6 +271,14 @@ button{
 @media screen and (min-width: 500px){
 	.hamburger{
 		display: none;
+	}
+
+	.navline2 , .navline{
+		position: relative;
+	}
+
+	body{
+		padding-bottom: 400px;
 	}
 }
 
