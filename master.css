@@ -32,7 +32,7 @@ a:visited{
 }
 
 li, p{
-	color: #D3DEE4;
+	color: #B6BEC2;
 }
 
 h2{
@@ -157,11 +157,6 @@ button{
 
 .button:hover {
 	color: #D6A956;
-}
-
-#button:hover .rings{
-	stroke: #D6A956;
-	r: 35%;
 }
 
 .rings{
