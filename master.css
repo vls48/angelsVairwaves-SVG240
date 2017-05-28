@@ -132,7 +132,7 @@ button{
 }
 
 .earthpath{
-	animation: rotate 45s linear;
+	animation: rotate 45s linear infinite;
 	transform-origin: 50% 50%;
 }
 
@@ -237,7 +237,7 @@ button{
 .earth{
 	position: fixed;
 	width: 100%;
-	height: 100vh;
+	height: 1px;
 }
 
 .worldsvg{

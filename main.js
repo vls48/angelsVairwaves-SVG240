@@ -28,12 +28,16 @@ function audioToggle(msg) {
     if (isPlaying) {
         audioPlayer.pause()
         isPlaying = false
-        document.getElementById('soundicon').classList.add('hide');
+        document.getElementById('BAR1').classList.add('hide');
+        document.getElementById('BAR2').classList.add('hide');
+        document.getElementById('BAR3').classList.add('hide');
         
     } else {
         audioPlayer.play()
         isPlaying = true
-        document.getElementById('soundicon').classList.remove('hide');
+        document.getElementById('BAR1').classList.remove('hide');
+        document.getElementById('BAR2').classList.remove('hide');
+        document.getElementById('BAR3').classList.remove('hide');
     }
 
     //audioPlayer.pause()
