@@ -9,10 +9,10 @@ body{
 	padding-bottom: 100px;
 
 
-  background-color: #333333;
-  /* transition on change */
-  opacity: 1;
-  transition: 3s opacity;
+	  background-color: #333333;
+	  /* transition on change */
+	  opacity: 1;
+	  transition: 3s opacity;
 
 }
 
@@ -21,7 +21,13 @@ body.blackScreen {
   transition: none;
 }
 
+.v{
+	width: 25px;
+}
 
+#vline{
+	transform: translateY(-29px);
+}
 
 a{
 	text-decoration: none;	
@@ -106,6 +112,20 @@ button{
 
 .textbutton{
 	text-align: center;
+}
+
+@keyframes linegrow{
+	from{
+		transform: scaleX(1);
+
+	}
+	to{
+		transform: scaleX(1.5);
+	}
+}
+
+#vline{
+	
 }
 
 @keyframes circle {
@@ -229,8 +249,13 @@ button{
 
 .navline2{
 	position: fixed;
-	top: 7%;
+	top: 13%;
 	left: 0;
+}
+
+.v{
+	position: fixed;
+
 }
 
 .earth{
@@ -277,6 +302,8 @@ button{
 	section{
 	height: 540px;
 	padding-top: 50px;
+
+
 }
 
 
@@ -290,6 +317,10 @@ button{
 @media screen and (min-width: 500px){
 	.hamburger{
 		display: none;
+	}
+
+	.v{
+	position: relative;
 	}
 
 	.navline2 , .navline{
