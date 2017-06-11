@@ -168,7 +168,7 @@ button{
 
 @keyframes linegrowsec{
 	from{
-		transform: scaleX(.02)
+		transform: scaleX(.01)
 				   
 
 	}
@@ -307,7 +307,9 @@ svg.navline{
 	bottom: 211px;
 	left: 0;
 	animation: linegrowsec 3s forwards ease-in-out;
-	animation-delay: .5s;
+	animation-delay: 1s;
+	transform: scaleX(.01);
+	transition: all 1s;
 }
 
 .navline2{
