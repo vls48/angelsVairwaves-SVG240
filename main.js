@@ -9,6 +9,7 @@ var isPlaying = false;
 /* Open */
 function openNav() {
     document.getElementById("myNav").style.height = "100%";
+    console.log('heusfusau');
 }
 
 /* Close */
@@ -31,6 +32,7 @@ function audioToggle(msg) {
         document.getElementById('BAR1').classList.add('hide');
         document.getElementById('BAR2').classList.add('hide');
         document.getElementById('BAR3').classList.add('hide');
+    
         
     } else {
         audioPlayer.play()
@@ -38,6 +40,7 @@ function audioToggle(msg) {
         document.getElementById('BAR1').classList.remove('hide');
         document.getElementById('BAR2').classList.remove('hide');
         document.getElementById('BAR3').classList.remove('hide');
+        
     }
 
     //audioPlayer.pause()

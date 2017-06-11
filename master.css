@@ -13,7 +13,7 @@ body{
 	  /* transition on change */
 	  opacity: 1;
 	  transition: 3s opacity;
-
+	
 }
 
 body.blackScreen {
@@ -31,8 +31,14 @@ body.blackScreen {
 	animation-delay: .5s;
 }
 
+section{
+	position: initial;
+	z-index: -3;
+}
+
 a{
-	text-decoration: none;	
+	text-decoration: none;
+	color: #B6BEC2;	
 }
 
 a:visited{
@@ -86,6 +92,38 @@ ul{
 	text-align: center;
 }
 /*//---------------------------------------------------//*/
+
+.man{
+	position: fixed;
+	transform: scale(.7);
+	fill: #B6BEC2;
+	right: 0;
+	bottom: 20px;
+	transition: all 4s; 
+}
+
+.man:hover{
+	animation: flip 4s infinite linear;
+	transition: all 4s ease-out;
+	}
+
+#string{
+	position: fixed;
+	top:0;
+	right:140px;
+}
+
+@keyframes flip{
+	from{
+		transform: scale(.7)
+				   rotateY(0deg)
+
+	}
+	to{
+		transform: scale(.7)
+				   rotateY(360deg);
+	}
+}
 
 .enter{
 	width: 60%;
@@ -251,11 +289,22 @@ button{
 	bottom: 20%;
 	left: 50%;
 	margin-left: -18px;
+	z-index: 10;
+	
 }
 
-.navline{
+.hambg{
 	position: fixed;
-	bottom: 28%;
+	background-color: rgba(0,0,0, .9);
+	width: 100%;
+	bottom: 0%;
+	height: 29%;
+	z-index: 1;
+}
+
+svg.navline{
+	position: fixed;
+	bottom: 211px;
 	left: 0;
 	animation: linegrowsec 3s forwards ease-in-out;
 	animation-delay: .5s;
@@ -263,7 +312,7 @@ button{
 
 .navline2{
 	position: fixed;
-	top: 13%;
+	top: 89px;
 	left: 0;
 }
 
@@ -276,6 +325,7 @@ button{
 	position: fixed;
 	width: 100%;
 	height: 1px;
+	z-index: 3;
 }
 
 .worldsvg{
@@ -295,13 +345,20 @@ button{
 
 .hide{
 	opacity: 0;
+	transform: translate(-9px);
+	transition: all .5s;
 }
+
+.move{
+	transform: translate(9px);
+	transition: all .5s;
+}
+
 
 #soundicon{
 	width: 36px;
 	height: 36px;
-	margin: 5px;
-	margin-left: 20px;
+	margin-left: 25px;
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
@@ -342,6 +399,11 @@ button{
 
 	.navline2 , .navline{
 		position: relative;
+		top:0;
+	}
+
+	svg.navline{
+		position: initial;
 	}
 
 	body{
@@ -356,6 +418,10 @@ button{
 	.heading{
 		font-size: 2.9rem;
 		margin-bottom: 0;
+	}
+
+	.hambg{
+		display: none;
 	}
 }
 
@@ -409,4 +475,15 @@ button{
 		max-width: 30%;
 	}
 
+}
+
+@media screen and (max-width: 920px){
+	.man{
+		opacity: 0;
+		transition: all 1s;
+	}
+	#string{
+		opacity: 0;
+		transition: all 1s;
+	}
 }
